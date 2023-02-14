@@ -23,7 +23,7 @@ return new class extends Migration
             $table->boolean('status')->default(0);
 
             //Relación Article--User
-            $table->foreignId('user_id')->constrained()->nullable()
+            $table->foreignId('user_id')->nullable()->constrained()
                 ->onDelete('set null');
 
             //Relación Article--Category
